@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <div class="container">
+        <div class="moon">
+            <img src="image/moon.png">
+        </div>
+        <!-- <img class="text" src="image/frame.png"> -->
+        <div class="frame">
+            <img class="text" src="image/frame.png">
+            <span>Happy<br/>new<br/>year</span>
+        </div>
+        <img class="w-100 bg-window" src="image/window.png">
+        <div class="kumo_1">
+            <img src="image/kumo_1.png">
+        </div>
+        <div class="larntern_1">
+            <img src="image/larntern_1.png">
+        </div>
+        <div class="right door">
+            <img class="h-100" src="image/door.png">
+        </div>
+        <div class="left door">
+            <img class="h-100" src="image/door.png">
+        </div>
+        <div class="kumo_2">
+            <img src="image/kumo_2.png">
+        </div>
+        <div class="larntern_2">
+            <img src="image/larntern_1.png">
+        </div>
+        <div class="kumo_3">
+            <img src="image/kumo_3.png">
+        </div>
+        <div class="kumo_4">
+            <img src="image/kumo_4.png">
+        </div>
+        <div class="year">
+            <img src="image/2020.png">
+        </div>
+        <div class="hanabi hana-1"><img src="images/hanabi.png"></div>
+        <div class="hanabi hana-2"><img src="images/hanabi.png"></div>
+        <div class="hanabi hana-3"><img src="images/hanabi.png"></div>
+        <div class="hanabi hana-4"><img src="images/hanabi.png"></div>
+        <div class="hanabi hana-5"><img src="images/hanabi.png"></div>
+        <div class="hanabi hana-6"><img src="images/hanabi.png"></div>
+    </div>
+</body>
+<style type="text/css">
+    @font-face {
+        font-family: diavlo;
+        src: url('fonts/Diavlo_MEDIUM.ttf');
+    }
+    body {
+        background-color: #17425f;
+        height: 100vh;
+        position: relative;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        z-index: -1;
+    }
+    .moon {
+        position: absolute;
+        left: 55%;
+        width: 7%;
+        bottom: 62%;
+        filter: drop-shadow(8px 8px 5px #333);
+        animation: moonRise 4s ease-out 1s both;
+    }
+    .bg-window {
+        filter: drop-shadow(8px 8px 5px #333);
+        position: absolute;
+        margin: auto;
+        top: -9999px;
+        bottom: -9999px;
+        z-index: 0
+    }
+    .container {
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        width:100vw;
+        height:100vh;
+    }
+    .kumo_1 {
+        position: absolute;
+        top: 4%;
+        filter: drop-shadow(8px 8px 5px #333);
+        right: 25%;
+        width: 14%;
+        animation: kumoFlyDown 10s linear 0s both, kumoMovingst 2.5s 10s infinite;
+        /*animation: latternFlyDown 4.3s linear 3s both;*/
+    }
+    .larntern_1 {
+        position: absolute;
+        bottom: 3%;
+        left: 12%;
+        width: 13%;
+        filter: drop-shadow(8px 8px 5px #333);
+        transform: scale(0.8);
+        animation: latternFlyDown 4.3s linear 3s both;
+    }
+    .larntern_2 {
+        position: absolute;
+        bottom: 50%;
+        right: 12%;
+        width: 13%;
+        filter: drop-shadow(8px 8px 5px #333);
+        transform: scale(1.2);
+        animation: latternFlyDown 4s linear 3s both;
+    }
+    .larntern_2 img, .larntern_1 img, .kumo_1 img, .kumo_2 img, .kumo_3 img, .kumo_4 img, .moon img, .year img {
+        width: 100%;
+    }
+    .door {
+        height: 100vh;
+        position: absolute;
+    }
+    .door img {
+        filter: drop-shadow(8px 8px 5px #333);
+    }
+    .kumo_2 {
+        position: absolute;
+        bottom: 5%;
+        right: 56%;
+        width: 14%;
+        filter: drop-shadow(8px 8px 5px #333);
+        animation: kumoSlideFromLeft 7.5s linear backwards, kumoMovingnd 10s 7.5s infinite;
+    }
+    .w-100 {
+        width: 100%;
+    }
+    .h-100 {
+        height: 100%;
+    }
+    .right.door {
+        animation: rightDoorSlideIn 2s 1s both;
+        right: 0;
+        top: 0;
+    }
+    .left.door {
+        animation: leftDoorSlideIn 2s 1s both;
+        left: 0;
+        top: 0;
+    }
+    .kumo_3 {
+        position: absolute;
+        top: 6%;
+        left: 2%;
+        width: 39%;
+        filter: drop-shadow(8px 8px 5px #333);
+        /*animation: kumoMovingnd 9s infinite;*/
+        animation: kumoSlideFromLeft 5.5s linear backwards, kumoMovingnd 12s 5.5s infinite;
+    }
+    .kumo_4 {
+        position: absolute;
+        bottom: 28%;
+        width: 21%;
+        right: 19%;
+        filter: drop-shadow(8px 8px 5px #333);
+        animation: kumoSlideFromRight 6.5s linear backwards, kumoMovingnd 8s 6.5s infinite;
+    }
+    .frame {
+        display: contents;
+        overflow: hidden;
+        position: relative;
+    }
+    .frame span {
+        z-index: 9;
+        font-family: diavlo;
+        font-size: 2em;
+        color: #fcc60d;
+        line-height: 2em;
+        animation: opacity 2s 11s linear backwards;
+    }
+    .text {
+        position: absolute;
+        filter: drop-shadow(8px 8px 5px #333);
+        margin: 0 auto;
+        height: 30%;
+        left: 0;
+        right: 0;
+        text-transform: uppercase;
+        animation: appear 3s 7s linear backwards;
+    }
+    .text::after {
+        content: 'Happy new year';
+        text-transform: uppercase;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        z-index: 9;
+        font-family: diavlo;
+        font-size: 2em;
+        color: #fcc60d;
+        position: absolute;
+        line-height: 2em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.5s;
+        transform: scale(0) rotateY(0deg);
+    }
+    .text::before {
+        content: 'Happy new year';
+        position: absolute;
+        top: 0;
+        z-index: 9;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #ff0;
+        color: chocolate;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.5s;
+    }
+    .text:hover::before {
+        left: 100%;
+        transform: scale(0) rotateY(360deg);
+        opacity: 0;
+    }
+/*    .frame:after {
+        content: 'Button';
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background-color: #ff0;
+        color: chocolate;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.5s;
+        transform: scale(0) rotateY(0deg);
+    }    */
+    .year {
+        position: absolute;
+        bottom: 2%;
+        max-width: 13%;
+        filter: drop-shadow(8px 8px 5px #333);
+        right: 13%;
+        animation: bounceIn 2.5s 7s linear backwards;
+    }
+    .hanabi img {
+        position: absolute;
+        transform-origin: center center;
+        transition-property: all;
+        transition-timing-function: linear;
+    }
+    .hanabi.hana-1 img {
+        width: 30%;
+        top: 5%;
+        left: 4%;
+        animation: hanabi 3s 9s infinite backwards;
+    }
+    .hanabi.hana-2 img {
+        width: 16%;
+        top: 6.5%;
+        left: 20%;
+        /*transition-delay: 0.75s;*/
+        animation: hanabi 2.5s 9s infinite backwards;
+    }
+    .hanabi.hana-3 img {
+        width: 20%;
+        top: 6.3%;
+        right: 13%;
+        /*transition-delay: 0.76s;*/
+        animation: hanabi 2s 9.75s infinite backwards;
+    }
+    .hanabi.hana-4 img {
+        width: 10%;
+        top: 40%;
+        left: 30%;
+/*        transition-delay: 1s;*/
+        animation: hanabi 2s 9.77s infinite backwards;
+    }
+    .hanabi.hana-5 img {
+        width: 30%;
+        top: 25%;
+        right: 1%;
+        /*transition-delay: 0.75s;*/
+        animation: hanabi 2s 11s infinite backwards;
+    }
+    .hanabi.hana-6 img {
+        width: 20%;
+        top: 7%;
+        right: 40%;
+        /*transition-delay: 0.75s;*/
+        animation: hanabi 2s 12s infinite backwards;
+    }
+    @keyframes leftDoorSlideIn {
+        from {
+            transform: translateX(-100%);
+        }
+        to {
+            transform: translateX(0);
+        }
+    }
+    @keyframes rightDoorSlideIn {
+        from {
+            transform: translateX(100%);
+        }
+        to {
+            transform: translateX(0);
+        }
+    }
+    @keyframes moonRise {
+        from {
+            transform: translateY(100vh);
+        }
+        to {
+            transform: translateY(0);
+        }
+    }
+    @keyframes latternFlyDown {
+        from {
+            transform: translateY(-100vh);
+        }
+        to {
+            transform: translateY(0);
+        }
+    }
+    @keyframes kumoSlideFromLeft {
+        from {
+            transform: translateX(-50vw);
+        }
+        to {
+            transform: translateX(0);
+        }
+    }
+    @keyframes kumoSlideFromRight {
+        from {
+            transform: translateX(50vw);
+        }
+        to {
+            transform: translateX(0);
+        }
+    }
+    @keyframes kumoFlyDown {
+        from {
+            transform: translateY(-400%);
+        }
+        to {
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes kumoMovingst {
+        0% {
+            transform: translateY(0%);
+        }
+        50% {
+            transform: translateY(30%);
+        }
+        100% {
+            transform: translateY(0%);
+        }
+    }
+    @keyframes kumoMovingnd {
+        0% {
+            transform: translateX(0);
+        }
+        50% {
+            transform: translateX(-40%);
+        }
+        100% {
+            transform: translateX(0%);
+        }
+    }
+    @keyframes kumoMovingrd {
+        0% {
+            transform: translateX(5%);
+        }
+        50% {
+            transform: translateX(-1%);
+        }
+        100% {
+            transform: translateX(5%);
+        }
+    }
+    @keyframes kumoMovingth {
+        0% {
+            transform: translateX(-3%);
+        }
+        50% {
+            transform: translateX(3%);
+        }
+        100% {
+            transform: translateX(-3%);
+        }
+    }
+    @keyframes hanabi {
+        0% {
+            opacity: 0;
+            transform: scale(0);
+        }
+        50% {
+            opacity: 1;
+            transform: scale(0.5);
+        }
+        100% {
+            opacity: 0;
+            transform: scale(1);
+        }
+    }
+    @keyframes appear {
+        from {
+            opacity: 0;
+            transform: translateY(-100%);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    @keyframes opacity {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+    @keyframes bounceIn {
+        0% {
+            opacity: 0;
+            transform: scale(0.5);
+        }
+        75% {
+            transform: scale(1.2);
+        }
+        100% {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+</style>
+</html>
